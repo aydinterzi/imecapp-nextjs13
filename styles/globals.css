@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: blueviolet;
+}
+
+div[data-nextjs-scroll-focus-boundary] {
+  height: 100%;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 90% 1fr;
+  grid-template-rows: 96px auto 72px;
+}
+
+.container>* {
+  grid-column: 2;
+}
