@@ -1,6 +1,14 @@
 import React from 'react'
 import { roles, programming_languages } from "@/supabase/models";
+import { useForm, SubmitHandler } from "react-hook-form";
+type Inputs = {
+  example: string,
+  exampleRequired: string,
+};
+
 const PostAd = () => {
+  const { register, handleSubmit, watch, formState: { errors } } = useForm<Inputs>();
+  const onSubmit: SubmitHandler<Inputs> = data => console.log(data);
   return (
     <div>
       <form className='flex flex-col gap-4 w-[40%] mx-auto'>
